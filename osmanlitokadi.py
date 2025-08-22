@@ -73,7 +73,7 @@ def find_baseurl(url):
 def generate_m3u(base_url, referer, user_agent):
     lines = ["#EXTM3U"]
     for idx, k in enumerate(KANALLAR, start=1):
-        name = f"osmanlıtokadı {k['kanal_adi']}"
+        name = f"osmanlitokadi {k['kanal_adi']}"
         lines.append(f'#EXTINF:-1 tvg-id="{k["tvg_id"]}" tvg-name="{name}",{name}')
         lines.append(f'#EXTVLCOPT:http-user-agent={user_agent}')
         lines.append(f'#EXTVLCOPT:http-referrer={referer}')
@@ -98,4 +98,5 @@ if __name__ == "__main__":
         f.write(playlist)
 
 
-    print(f"{GREEN}[OK] Playlist oluşturuldu: osmanlıtokadı.m3u{RESET}")
+    print(f"{GREEN}[OK] Playlist oluşturuldu: osmanlitokadi.m3u{RESET}")
+
