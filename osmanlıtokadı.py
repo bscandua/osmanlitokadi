@@ -8,7 +8,7 @@ GREEN = "\033[92m"
 YELLOW = "\033[93m"
 RESET = "\033[0m"
 
-# Kanallar listesi (başına osmanlıtokadı eklenecek)
+# Kanallar listesi (başına osmanlitokadi eklenecek)
 KANALLAR = [
     {"dosya": "yayinzirve.m3u8", "tvg_id": "BeinSports1.tr", "kanal_adi": "Bein Sports 1 HD (VIP)"},
     {"dosya": "yayin1.m3u8", "tvg_id": "BeinSports1.tr", "kanal_adi": "Bein Sports 1 HD"},
@@ -94,7 +94,8 @@ if __name__ == "__main__":
         sys.exit(1)
 
     playlist = generate_m3u(base_url, site, "Mozilla/5.0")
-    with open("osmanlıtokadı.m3u", "w", encoding="utf-8") as f:
+    with open("osmanlitokadi.m3u", "w", encoding="utf-8") as f:
         f.write(playlist)
+
 
     print(f"{GREEN}[OK] Playlist oluşturuldu: osmanlıtokadı.m3u{RESET}")
